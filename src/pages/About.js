@@ -131,7 +131,7 @@ export default function About() {
           <h2 className="section-heading">Our Gallery</h2>
         </div>
         <div style={{ height: '600px', position: 'relative', margin: '2rem 0' }}>
-          <DomeGallery />
+          <DomeGallery grayscale={false} />
         </div>
       </div>
       <style>{`

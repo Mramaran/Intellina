@@ -5,31 +5,60 @@ import { useGesture } from '@use-gesture/react';
 import './DomeGallery.css';
 
 const DEFAULT_IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Abstract art'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1755569309049-98410b94f66d?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Modern sculpture'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1755497595318-7e5e3523854f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Digital artwork'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1755353985163-c2a0fe5ac3d8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Contemporary art'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1745965976680-d00be7dc0377?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Geometric pattern'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1752588975228-21f44630bb3c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Textured surface'
-  },
-  { src: 'https://pbs.twimg.com/media/Gyla7NnXMAAXSo_?format=jpg&name=large', alt: 'Social media image' }
+  { src: '/assets/gallery/20250404_094038.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250404_095419.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250404_151214.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250404_155720.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_153927 (1).jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154234 (1).jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154345 (1).jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154420 (1).jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154457.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154616 (1).jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154649 (1).jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154843 (1).jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/20250405_154919.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6264.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6265.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6268.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6270.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6274.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6277.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6286.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6290.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6293.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6305.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6315.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6317.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6334.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/Copy of Sharp-6338.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG-20250404-WA0012.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG-20250407-WA0002.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG20250404141746.jpg', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_0060.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_0063.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_0064.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_0242.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_8306.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_8323.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_8329.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_8885.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_8924.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_8965.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_9073.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_9155.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_9313.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_9347.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/IMG_9606.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0024.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0164.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0170.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0272.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0278.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0285.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0420.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0452.JPG', alt: 'Gallery image' },
+  { src: '/assets/gallery/_MG_0595.JPG', alt: 'Gallery image' }
 ];
 
 const DEFAULTS = {
