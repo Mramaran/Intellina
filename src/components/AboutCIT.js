@@ -1,8 +1,17 @@
+import { useState } from 'react';
+
 export default function AboutCIT() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="about-split-layout">
-      <div className="about-box about-box-half">
-        <div className="about-box-inner">
+    <div className="about-box">
+      <div 
+        className="about-box-inner" 
+        style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div style={{ flex: 3 }}>
           <h2 className="stat-number">About CIT</h2>
           <div className="about-content">
             <p>
@@ -10,11 +19,35 @@ export default function AboutCIT() {
             </p>
           </div>
         </div>
-      </div>
-      
-      <div className="about-box about-box-half">
-        <div className="about-box-inner about-image-card">
-          <img src="/assets/clg.jpeg" alt="CIT Campus" />
+        <div className="about-image-card" style={{ flex: 2, position: 'relative', overflow: 'hidden' }}>
+          <img 
+            src="/assets/clg.jpeg" 
+            alt="CIT Campus" 
+            style={{ 
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              opacity: isHovered ? 0 : 1,
+              transition: 'opacity 0.5s ease-in-out',
+              zIndex: 1
+            }}
+          />
+          <img 
+            src="/assets/clg upsidedown.png" 
+            alt="CIT Campus Upside Down" 
+            style={{ 
+              position: 'relative',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              opacity: isHovered ? 1 : 0,
+              transition: 'opacity 0.5s ease-in-out',
+              zIndex: 0
+            }}
+          />
         </div>
       </div>
     </div>
